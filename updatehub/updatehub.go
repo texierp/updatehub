@@ -656,8 +656,8 @@ func (uh *UpdateHub) validateProcedure() error {
 		return err
 	}
 
-	// We can Validate the update by setting
-	// 'upgrade_available' to 0, and then go
+	// We can Validate the update by calling
+	// 'updatehub-active-validated', and then go
 	// back to the state machine.
 	err = aii.SetValidate()
 	if err != nil {
